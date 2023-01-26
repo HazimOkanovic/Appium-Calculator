@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appium-Calculator", "Appium-Calculator\Appium-Calculator.csproj", "{B9B4E194-4C04-4EDC-AB44-A924CF8D7D61}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Appium-Practice", "Appium-Practice\Appium-Practice.csproj", "{B9B4E194-4C04-4EDC-AB44-A924CF8D7D61}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
