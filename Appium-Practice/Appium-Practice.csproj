@@ -12,7 +12,7 @@
         <AssemblyName>Appium_Practice</AssemblyName>
         <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
         <FileAlignment>512</FileAlignment>
-        <LangVersion>11</LangVersion>
+        <LangVersion>10</LangVersion>
     </PropertyGroup>
     <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
         <PlatformTarget>AnyCPU</PlatformTarget>
@@ -71,6 +71,7 @@
         <Compile Include="Pages\SignUpPage.cs" />
         <Compile Include="Properties\AssemblyInfo.cs" />
         <Compile Include="Tests\BaseTest.cs" />
+        <Compile Include="Tests\SignUpTests.cs" />
     </ItemGroup>
     <ItemGroup>
       <None Include="App.config" />

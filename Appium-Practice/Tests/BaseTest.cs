@@ -7,7 +7,7 @@ namespace Appium_Practice.Tests
 {
     public class BaseTest
     {
-        private readonly AndroidDriver<AndroidElement> driver;
+        protected AndroidDriver<AndroidElement> driver;
 
         protected BaseTest()
         {

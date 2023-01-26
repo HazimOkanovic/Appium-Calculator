@@ -13,6 +13,7 @@ namespace Appium_Calculator.Helpers
             desiredCapabilities.AddAdditionalCapability("ignoreHiddenApiPolicyError", "true");
             desiredCapabilities.AddAdditionalCapability("allowTestPackages", "true");
             desiredCapabilities.AddAdditionalCapability("appWaitForLaunch", "false");
+            desiredCapabilities.AddAdditionalCapability("noSign", "true");
             return new AppiumOptions();
         }
     }
