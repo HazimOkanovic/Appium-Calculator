@@ -14,14 +14,42 @@ public class SignUpTests : BaseTest
         signInPage = new SignInPage(driver);
     }
 
-    [Test]
-    public void FirstTest()
+    [Test, Order(1)]
+    public void SuccessfulAccountCreation()
     {
         signUpPage
             .EnterFirstName("Hazim")
             .EnterLastName("Okanovic")
-            .EnterEmail("someemail")
-            .EnterPassword("somepassword")
+            .EnterEmail(Constants.GenerateEmail())
+            .EnterPassword("Somepassword");
+        
+        Assert.That(signUpPage.GetButtonTitle(), Is.EqualTo("Verify email to sign up"));
+    }
+
+    [Test, Order(2)]
+    public void VerifyEmailScreen()
+    {
+        signUpPage
+            .ClickCreateAccount();
+        
+        Assert.That(signUpPage.GetVerifyEmailTitle(), Is.EqualTo("Verify your email securely"));
+    }
+
+    [Test, Order(3)]
+    public void GetBackTest()
+    {
+        signUpPage
+            .ClickGetBack();
+        
+        Assert.That(signUpPage.GetTitle(), Is.EqualTo("Sign up"));
+    }
+
+    [Test, Order(4)]
+    public void ClickSignInTest()
+    {
+        signUpPage
             .ClickSignInButton();
+        
+        Assert.That(signInPage.GetTitle(), Is.EqualTo("Sign in"));
     }
 }

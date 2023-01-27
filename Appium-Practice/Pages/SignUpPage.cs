@@ -12,6 +12,9 @@ public class SignUpPage : BasePage
     private readonly By PasswordInput = MobileBy.Id("com.contextlogic.wish:id/passwordText");
     private readonly By CreateAccountButton = MobileBy.Id("com.contextlogic.wish:id/createAccountButton");
     private readonly By SignInButton = MobileBy.Id("com.contextlogic.wish:id/signInButton");
+    private readonly By VerifyEmailTitle = MobileBy.Id("com.contextlogic.wish:id/title");
+    private readonly By BackButton = MobileBy.Id("com.contextlogic.wish:id/back_button");
+    private readonly By Title = MobileBy.Id("com.contextlogic.wish:id/title");
     
     public SignUpPage(AndroidDriver<AndroidElement> driver) : base(driver)
     {
@@ -44,6 +47,27 @@ public class SignUpPage : BasePage
     public SignUpPage ClickCreateAccount()
     {
         WaitElementVisibleAndGet(CreateAccountButton).Click();
+        return this;
+    }
+
+    public string GetButtonTitle()
+    {
+        return WaitElementVisibleAndGet(CreateAccountButton).Text;
+    }
+    
+    public string GetVerifyEmailTitle()
+    {
+        return WaitElementVisibleAndGet(VerifyEmailTitle).Text;
+    }
+    
+    public string GetTitle()
+    {
+        return WaitElementVisibleAndGet(Title).Text;
+    }
+
+    public SignUpPage ClickGetBack()
+    {
+        WaitElementVisibleAndGet(BackButton).Click();
         return this;
     }
     
