@@ -18,12 +18,12 @@ public class SignUpTests : BaseTest
     public void SuccessfulAccountCreation()
     {
         signUpPage
-            .EnterFirstName("Hazim")
-            .EnterLastName("Okanovic")
+            .EnterFirstName(Constants.FirstName)
+            .EnterLastName(Constants.LastName)
             .EnterEmail(Constants.GenerateEmail())
-            .EnterPassword("Somepassword");
+            .EnterPassword(Constants.Password);
         
-        Assert.That(signUpPage.GetButtonTitle(), Is.EqualTo("Verify email to sign up"));
+        Assert.That(signUpPage.GetButtonTitle(), Is.EqualTo(Constants.SignUpButton));
     }
 
     [Test, Order(2)]
@@ -32,7 +32,7 @@ public class SignUpTests : BaseTest
         signUpPage
             .ClickCreateAccount();
         
-        Assert.That(signUpPage.GetVerifyEmailTitle(), Is.EqualTo("Verify your email securely"));
+        Assert.That(signUpPage.GetVerifyEmailTitle(), Is.EqualTo(Constants.VerifyEmailTitle));
     }
 
     [Test, Order(3)]
@@ -41,7 +41,7 @@ public class SignUpTests : BaseTest
         signUpPage
             .ClickGetBack();
         
-        Assert.That(signUpPage.GetTitle(), Is.EqualTo("Sign up"));
+        Assert.That(signUpPage.GetTitle(), Is.EqualTo(Constants.SignUpTitle));
     }
 
     [Test, Order(4)]
@@ -50,6 +50,6 @@ public class SignUpTests : BaseTest
         signUpPage
             .ClickSignInButton();
         
-        Assert.That(signInPage.GetTitle(), Is.EqualTo("Sign in"));
+        Assert.That(signInPage.GetTitle(), Is.EqualTo(Constants.SignInTitle));
     }
 }
