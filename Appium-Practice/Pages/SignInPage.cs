@@ -12,6 +12,9 @@ public class SignInPage : BasePage
     private readonly By SignInButton = MobileBy.Id("com.contextlogic.wish:id/signInButton");
     private readonly By SignUpButton = MobileBy.Id("com.contextlogic.wish:id/createAccountButton");
     private readonly By CloseButton = MobileBy.Id("com.contextlogic.wish:id/closeButton");
+    private readonly By WelcomeBackTitle = MobileBy.Id("com.contextlogic.wish:id/welcome_back_text");
+    private readonly By SignInAgainButton = MobileBy.Id("com.contextlogic.wish:id/signin_button");
+    private readonly By SignInOtherAccountButton = MobileBy.Id("com.contextlogic.wish:id/other_account_button");
 
     public SignInPage(AndroidDriver<AndroidElement> driver) : base(driver)
     {
