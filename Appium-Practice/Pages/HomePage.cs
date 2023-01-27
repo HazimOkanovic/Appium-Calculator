@@ -13,4 +13,21 @@ public class HomePage : BasePage
     public HomePage(AndroidDriver<AndroidElement> driver) : base(driver)
     {
     }
+
+    public HomePage ClickMenuButton()
+    {
+        WaitElementVisibleAndGet(MenuButton).Click();
+        return this;
+    }
+
+    public string GetNameTitle()
+    {
+        return WaitElementVisibleAndGet(NameTitle).Text;
+    }
+
+    public SettingsPage ClickSettingsButton()
+    {
+        WaitElementVisibleAndGet(SettingsButton).Click();
+        return new SettingsPage(driver);
+    }
 }
