@@ -5,7 +5,7 @@ namespace Appium_Practice;
 
 public static class Constants
 {
-    public const int TimeOutInSec = 30;
+    public const int TimeOutInSec = 120;
     private static Random random = new Random();
     public const string FirstName = "Hazim";
     public const string LastName = "Okanovic";

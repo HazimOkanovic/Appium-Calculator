@@ -46,6 +46,18 @@ public class SignInPage : BasePage
         return this;
     }
 
+    public SignInPage ClearEmail()
+    {
+        WaitElementVisibleAndGet(EmailInput).Clear();
+        return this;
+    }
+
+    public SignInPage ClearPassword()
+    {
+        WaitElementVisibleAndGet(PasswordInput).Clear();
+        return this;
+    }
+    
     public SignInPage ClickSignInOtherAccount()
     {
         WaitElementVisibleAndGet(SignInOtherAccountButton).Click();
