@@ -1,5 +1,4 @@
 using Appium_Practice.Components;
-using Appium_Practice.Tests;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Appium;
 using OpenQA.Selenium.Appium.Android;
