@@ -15,7 +15,15 @@ public class SignUpTests : BaseTest
     }
 
     [Test, Order(1)]
-    public void SuccessfulAccountCreation()
+    public void ClickCreateAccount()
+    {
+        signInPage
+            .ClickSignUpButton();
+        
+        Assert.That(signUpPage.GetTitle(), Is.EqualTo(Constants.SignUpTitle));
+    }
+    [Test, Order(2)]
+    public void EnterAllDataTest()
     {
         signUpPage
             .EnterFirstName(Constants.FirstName)
@@ -26,7 +34,7 @@ public class SignUpTests : BaseTest
         Assert.That(signUpPage.GetButtonTitle(), Is.EqualTo(Constants.SignUpButton));
     }
 
-    [Test, Order(2)]
+    [Test, Order(3)]
     public void VerifyEmailScreen()
     {
         signUpPage
@@ -35,7 +43,7 @@ public class SignUpTests : BaseTest
         Assert.That(signUpPage.GetVerifyEmailTitle(), Is.EqualTo(Constants.VerifyEmailTitle));
     }
 
-    [Test, Order(3)]
+    [Test, Order(4)]
     public void GetBackTest()
     {
         signUpPage
@@ -44,7 +52,7 @@ public class SignUpTests : BaseTest
         Assert.That(signUpPage.GetTitle(), Is.EqualTo(Constants.SignUpTitle));
     }
 
-    [Test, Order(4)]
+    [Test, Order(5)]
     public void ClickSignInTest()
     {
         signUpPage
